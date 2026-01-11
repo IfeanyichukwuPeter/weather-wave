@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather1.css" />
+    <title>Weather Wave</title>
+  </head>
+  <body>
+    <section class="container">
+      <nav>
+        <h3>Weather Wave</h3>
+        <div class="search-bar">
+ <input type="search" placeholder="Search for cities"/>
+ <button class="search-btn"><img src="weatherimgs/search.png" alt="search" class="search-icon"></button>
+        </div>
+        <button class="setting-btn">Settings</button>
+      </nav>
+      <header>Today's Forecast</header>
+      <section>
+        <main>
+          <div class="details">
+            <p class="location" id="location">Lagos, Nigeria.</p>
+            <p class="date" id="date">Saturday, 10th January, 2026</p>
+          </div>
+          <div class="forecast">
+            <img src="" alt="" class="weather-icon" />
+            <h1 class="degree"><span id="degree"></span>&deg;C</h1>
+          </div>
+        </main>
+        <weather-details>
+          <article>
+            <p>Feels Like</p>
+            <h2>64&deg;</h2>
+          </article>
+          <article>
+            <p>Humudity</p>
+            <h2>46&percnt;</h2>
+          </article>
+          <article>
+            <p>Wind</p>
+            <h2>9 <span>mph</span></h2>
+          </article>
+          <article>
+            <p>Precipitation</p>
+            <h2>0 in</h2>
+          </article>
+        </weather-details>
+      </section>
+      <div class="forecast-tabs">
+        <div class="tab active">Hourly forecast</div>
+        <div class="tab">Daily forecast</div>
+      </div>
+      <section class="hourly-forecast">
+         <div class="hour-item">
+          <div class="hour-time">11 AM</div>
+          <div class="hour-icon">☀️</div>
+          <div class="hour-temp">27°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">12 PM</div>
+          <div class="hour-icon">☀️</div>
+          <div class="hour-temp">27°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">1 PM</div>
+          <div class="hour-icon">🌤️</div>
+          <div class="hour-temp">26°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">2 PM</div>
+          <div class="hour-icon">🌤️</div>
+          <div class="hour-temp">25°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">3 PM</div>
+          <div class="hour-icon">🌤️</div>
+          <div class="hour-temp">24°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">4 PM</div>
+          <div class="hour-icon">☀️</div>
+          <div class="hour-temp">27°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">5 PM</div>
+          <div class="hour-icon">☀️</div>
+          <div class="hour-temp">27°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">6 PM</div>
+          <div class="hour-icon">🌤️</div>
+          <div class="hour-temp">26°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">7 PM</div>
+          <div class="hour-icon">🌤️</div>
+          <div class="hour-temp">25°</div>
+        </div>
+        <div class="hour-item">
+          <div class="hour-time">8 PM</div>
+          <div class="hour-icon">🌤️</div>
+          <div class="hour-temp">24°</div>
+        </div>
+      </section>
+      <section class="daily-forecast" style="display: none">
+        <div class="day-item">
+          <div class="day-name">Wed</div>
+          <div class="day-icon">🌤️</div>
+          <div class="day-temps">27° / 18°</div>
+        </div>
+        <div class="day-item">
+          <div class="day-name">Thu</div>
+          <div class="day-icon">☀️</div>
+          <div class="day-temps">27° / 18°</div>
+        </div>
+        <div class="day-item">
+          <div class="day-name">Fri</div>
+          <div class="day-icon">🌤️</div>
+          <div class="day-temps">27° / 18°</div>
+        </div>
+        <div class="day-item">
+          <div class="day-name">Sat</div>
+          <div class="day-icon">☀️</div>
+          <div class="day-temps">27° / 18°</div>
+        </div>
+        <div class="day-item">
+          <div class="day-name">Sunvv </div>
+          <div class="day-icon">☀️</div>
+          <div class="day-temps">27° / 18°</div>
+        </div>
+        <div class="day-item">
+          <div class="day-name">Mon</div>
+          <div class="day-icon">🌤️</div>
+          <div class="day-temps">27° / 18°</div>
+        </div>
+      </section>
+    </section>
+    <script src="weather1.js"></script>
+  </body>
+</html>
