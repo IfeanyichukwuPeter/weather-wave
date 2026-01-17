@@ -17,38 +17,77 @@
  <input type="search" placeholder="Search for cities"/>
  <button class="search-btn"><img src="weatherimgs/search.png" alt="search" class="search-icon"></button>
         </div>
-        <button class="setting-btn">Settings</button>
+       
+<div class="settings">
+  <button class="settings-btn" id="settingsBtn">Settings</button>
+  
+  <div class="settings-panel" id="settingsPanel">
+    <div class="panel-header">
+  <h3>Preferences</h3>
+  <button id="closeSettings" class="close-btn">×</button>
+</div>
+    
+    <div class="option-group">
+      <span>Temperature</span>
+      <div class="options">
+        <button class="option-btn active" data-unit="celsius">Celsius (°C)</button>
+        <button class="option-btn" data-unit="fahrenheit">Fahrenheit (°F)</button>
+      </div>
+    </div>
+    
+    <div class="option-group">
+      <span>Wind Speed</span>
+      <div class="options">
+        <button class="option-btn active" data-unit="kmh">km/h</button>
+        <button class="option-btn" data-unit="mph">mph</button>
+      </div>
+    </div>
+    
+    <div class="option-group">
+      <span>Theme</span>
+      <div class="options">
+        <button class="option-btn theme-toggle active" data-theme="light">Light</button>
+        <button class="option-btn theme-toggle" data-theme="dark">Dark</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       </nav>
       <header>Today's Forecast</header>
       <section>
-        <main>
+        <main id="weatherMain" class="weather-main">
           <div class="details">
             <p class="location" id="location">Lagos, Nigeria.</p>
             <p class="date" id="date">Saturday, 10th January, 2026</p>
           </div>
           <div class="forecast">
-            <img src="" alt="" class="weather-icon" />
             <h1 class="degree"><span id="degree"></span>&deg;C</h1>
           </div>
+          <div class="loading-overlay" id="loading">
+  <div class="dots">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p>Loading...</p>
+</div>
+
         </main>
-        <weather-details>
-          <article>
-            <p>Feels Like</p>
-            <h2>64&deg;</h2>
-          </article>
-          <article>
-            <p>Humudity</p>
-            <h2>46&percnt;</h2>
-          </article>
-          <article>
-            <p>Wind</p>
-            <h2>9 <span>mph</span></h2>
-          </article>
-          <article>
-            <p>Precipitation</p>
-            <h2>0 in</h2>
-          </article>
-        </weather-details>
+        <section class="weather-details">
+  <article id="feels-like"><p>Feels Like</p><h2>_ _°</h2></article>
+  <article id="humidity"><p>Humidity</p><h2>_ _°</h2></article>  
+  <article id="wind"><p>Wind</p><h2>_ <span>mph</span></h2></article>
+  <article id="precipitation"><p>Precipitation</p><h2>0 in</h2></article>
+  <article id="alerts">
+  <p>Alerts</p>
+  <h2 id="alertText">None</h2>
+</article>
+<article id="localTime">
+  <p>Local Time</p>
+  <h2 id="clock">--:--</h2>
+</article>
+</section>
       </section>
       <div class="forecast-tabs">
         <div class="tab active">Hourly forecast</div>
@@ -58,84 +97,84 @@
          <div class="hour-item">
           <div class="hour-time">11 AM</div>
           <div class="hour-icon">☀️</div>
-          <div class="hour-temp">27°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">12 PM</div>
           <div class="hour-icon">☀️</div>
-          <div class="hour-temp">27°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">1 PM</div>
           <div class="hour-icon">🌤️</div>
-          <div class="hour-temp">26°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">2 PM</div>
           <div class="hour-icon">🌤️</div>
-          <div class="hour-temp">25°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">3 PM</div>
           <div class="hour-icon">🌤️</div>
-          <div class="hour-temp">24°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">4 PM</div>
           <div class="hour-icon">☀️</div>
-          <div class="hour-temp">27°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">5 PM</div>
           <div class="hour-icon">☀️</div>
-          <div class="hour-temp">27°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">6 PM</div>
           <div class="hour-icon">🌤️</div>
-          <div class="hour-temp">26°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">7 PM</div>
           <div class="hour-icon">🌤️</div>
-          <div class="hour-temp">25°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
         <div class="hour-item">
           <div class="hour-time">8 PM</div>
           <div class="hour-icon">🌤️</div>
-          <div class="hour-temp">24°</div>
+          <div class="hour-temp">_ _°</div>
         </div>
       </section>
       <section class="daily-forecast" style="display: none">
         <div class="day-item">
           <div class="day-name">Wed</div>
           <div class="day-icon">🌤️</div>
-          <div class="day-temps">27° / 18°</div>
+          <div class="day-temps">_ _° / 18°</div>
         </div>
         <div class="day-item">
           <div class="day-name">Thu</div>
           <div class="day-icon">☀️</div>
-          <div class="day-temps">27° / 18°</div>
+          <div class="day-temps">_ _° / 18°</div>
         </div>
         <div class="day-item">
           <div class="day-name">Fri</div>
           <div class="day-icon">🌤️</div>
-          <div class="day-temps">27° / 18°</div>
+          <div class="day-temps">_ _° / _ _°</div>
         </div>
         <div class="day-item">
           <div class="day-name">Sat</div>
           <div class="day-icon">☀️</div>
-          <div class="day-temps">27° / 18°</div>
+          <div class="day-temps">_ _° / _ _°</div>
         </div>
         <div class="day-item">
-          <div class="day-name">Sunvv </div>
+          <div class="day-name">Sun</div>
           <div class="day-icon">☀️</div>
-          <div class="day-temps">27° / 18°</div>
+          <div class="day-temps">_ _° / _ _°</div>
         </div>
         <div class="day-item">
           <div class="day-name">Mon</div>
           <div class="day-icon">🌤️</div>
-          <div class="day-temps">27° / 18°</div>
+          <div class="day-temps">_ _° / _ _°</div>
         </div>
       </section>
     </section>
