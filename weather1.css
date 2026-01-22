@@ -1,7 +1,16 @@
 * {
   padding: 0;
+  max-width: 100%;
   box-sizing: border-box;
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Kills horizontal scroll */
+  margin: 0;
+  padding: 0;
+}
+
 
 body {
   background: linear-gradient(135deg, #d9e6f2 0%, #c3d8f0 100%);
@@ -9,6 +18,10 @@ body {
   padding: 20px;
   color: #333;
   font-family: 'Poppins', sans-serif;
+}
+#weatherMain,
+#weatherMain * {
+  color: inherit;
 }
 
 body.dark {
@@ -38,7 +51,32 @@ body.dark .day-item {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   overflow: visible !important;
 }
+#currentLocationBtn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  margin-left: 10px;
+   cursor: pointer;
+  transition: all 0.3s ease;
+  width: 70px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+body.light .location-btn {
+  --btn-bg: #f0f0f0;
+  --btn-text: #333;
+}
 
+body.dark .location-btn {
+  --btn-bg: #374151;
+  --btn-text: #f9fafb;
+}
+.location-img {
+  width: 30px;
+}
 h3 {
   font-size: 24px;
   font-weight: 700;
@@ -621,7 +659,7 @@ body.dark .hour-time {
   }
   
   input[type="search"] {
-    width: 85%;
+    width: 100%;
     border-top-left-radius: 50px;
     padding: 14px 60px 14px 20px;
   }
@@ -779,11 +817,18 @@ body.dark .hour-time {
 
 /* Landscape Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
+* {
+  max-width: 100%;
+}
+  
   main {
     height: 200px;
     padding: 20px;
   }
-  
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
   .weather-details {
     grid-template-columns: repeat(3, 1fr);
   }
